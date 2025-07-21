@@ -1,0 +1,77 @@
+:root {
+  /* Instrument Sans for text*/
+  /* Cormorant Garamond for titles (Orpheus Pro is paid) */
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  /* color: rgba(255, 255, 255, 0.87);
+  background-color: #242424; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.background_clear {
+  background-color: #e0e0db;
+  color: #2a2829
+}
+.background_dark {
+  background-color: #2a2829;
+  color: #EEEEEE
+}
+
+h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 6.5rem;
+  line-height: 1.4;
+  letter-spacing: 0em;
+  font-weight: 400;
+}
+h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 4.2rem;
+  line-height: 1.4;
+  letter-spacing: 0em;
+  font-weight: 400;
+}
+h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.8rem;
+  line-height: 1.4;
+  letter-spacing: 0em;
+  font-weight: 400;
+}
+h4 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  letter-spacing: 0em;
+  font-weight: 400;
+}
+p{
+  font-family: "Instrument Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1rem;
+  line-height: 1.8;
+  letter-spacing: -0.025em;
+  font-weight: 400;
+}
+
+.max-width {
+  max-width: 1200px;
+  margin: auto
+}
+
+.padding-sections {
+  padding: 3rem 1.3rem;
+}
