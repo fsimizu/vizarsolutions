@@ -58,13 +58,17 @@ h4 {
   letter-spacing: 0em;
   font-weight: 400;
 }
-p{
+p, li{
   font-family: "Instrument Sans", sans-serif;
   font-optical-sizing: auto;
   font-size: 1rem;
   line-height: 1.8;
   letter-spacing: -0.025em;
   font-weight: 400;
+}
+
+ul li::marker {
+  font-size: 0.6em;
 }
 
 .max-width {

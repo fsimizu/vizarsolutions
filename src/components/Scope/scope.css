@@ -1,0 +1,11 @@
+.wavy-underline {
+    display: inline-block;
+    position: relative;
+    font-weight: bold;
+    font-size: 2em;
+    padding-bottom: 15px;
+    background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 5 Q 10 0, 20 5 T 40 5 T 60 5 T 80 5 T 100 5' stroke='black' fill='transparent' stroke-width='2'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 10px;
+  }
