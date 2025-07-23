@@ -1,0 +1,46 @@
+.navbar__container {
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    width: 100%;
+    transition: all 0.7s ease;
+
+}
+
+
+/* The Overlay (background) */
+.overlay {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+/* The navigation links inside the overlay */
+.overlay a{
+    padding: 4px;
+    text-decoration: none;
+    color: var(--white);
+    display: block;
+    transition: 0.3s;
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 100;
+    line-height: 3rem;
+}
