@@ -1,6 +1,6 @@
 .hero__container {
     min-height: 500px;
-    height: 97vh;
+    height: 100vh;
     background-image: url("/images/hero_background.jpg");
     filter: brightness(0.95) contrast(1.05) saturate(0.8) hue-rotate(5deg);
     background-size: cover;

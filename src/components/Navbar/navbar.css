@@ -1,29 +1,53 @@
 .navbar__container {
     top: 0;
-    z-index: 99;
     width: 100%;
     display: flex;
     justify-content: center;
+    position: absolute;
 }
 
 .navbar {
     width: 100%;
     transition: all 0.7s ease;
-
+    z-index: 90;
 }
 
+.navbar-brand a {
+    text-decoration: none;
+    color: white;
+    
+}
+
+.navbar-brand h4 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.navbar button {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    font-size: 1.3rem;
+    filter: invert(97%) sepia(18%) saturate(372%) hue-rotate(355deg) brightness(118%) contrast(99%);
+}
 
 /* The Overlay (background) */
 .overlay {
     height: 0;
     width: 100%;
     position: fixed;
-    z-index: 99;
+    z-index: 50;
     left: 0;
     top: 0;
     overflow: hidden;
     transition: 0.5s;
 }
+
 /* Position the content inside the overlay */
 .overlay-content {
     position: relative;
@@ -32,15 +56,62 @@
     text-align: center;
     margin-top: 30px;
 }
-/* The navigation links inside the overlay */
-.overlay a{
-    padding: 4px;
+
+.overlay-content h3 {
+    cursor: pointer;
+}
+
+.overlay h3:hover,.overlay h3:focus,
+.overlay a:hover,.overlay a:hover {
+    color: orange !important;
+}
+
+.overlay .closebtn {
+    color: inherit;
     text-decoration: none;
-    color: var(--white);
     display: block;
     transition: 0.3s;
-    font-family: 'Inter', sans-serif;
-    font-size: 28px;
-    font-weight: 100;
-    line-height: 3rem;
+    text-align: right;
+    font-size: 48px;
+    font-weight: 100 ;
+    margin-right: 24px;
+    margin-top: 11px;
+    cursor: pointer;
 }
+
+/* BURGER ICON */
+.navbar__toggle-icon {
+    position: relative;
+    width: 32px;
+    height: 22px;
+    flex-shrink: 0;
+    display: inline-block;
+  }
+  
+  .navbar__toggle-icon::before,
+  .navbar__toggle-icon::after {
+    content: '';
+    position: absolute;
+    background-color: white;
+    transition: transform 0.2s ease-in-out;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    transform: translateY(-50%);
+
+  }
+  
+  .navbar__toggle-icon::before {
+    top: 75%;
+  }
+  
+  .navbar__toggle-icon::after {
+    top: 25%;
+  }
+  
+  .navbar__toggle-icon--close::after {
+    transform: translateY(5.5px) rotate(-135deg);
+  }
+  .navbar__toggle-icon--close::before {
+    transform: translateY(-5.5px) rotate(135deg);
+  }

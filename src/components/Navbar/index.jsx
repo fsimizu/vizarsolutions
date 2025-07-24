@@ -38,39 +38,36 @@ export function Navbar() {
     <div className="navbar__container">
 
       {/* Overlay */}
-      <div id="myNav" className="overlay" >
-        <a className="closebtn" onClick={handleCloseClick}>&times;</a>
+      <div id="myNav" className="overlay background_dark" >
+        {/* <a className="closebtn" onClick={handleCloseClick}>&times;</a> */}
         <div className="overlay-content">
-          <Link to="/">
-            <div onClick={() => { handleCloseClick; handleScroll('heroHome') }}>Home</div>
-          </Link>
-          <Link to="/">
-            <div onClick={() => { handleCloseClick; handleScroll('aboutUs') }}>About us</div>
-          </Link>
-          <Link to="/">
-            <div onClick={() => { handleCloseClick; handleScroll('heroHome') }}>Our Services</div>
-          </Link>
+            {/* <h3 onClick={() => { handleCloseClick; handleScroll('heroHome') }}>Home</h3> */}
+            <h3 onClick={() => { handleCloseClick; handleScroll('aboutUs') }}>About us</h3>
+            <h3 onClick={() => { handleCloseClick; handleScroll('ourServices') }}>Our Services</h3>
+            <h3 onClick={() => { handleCloseClick; handleScroll('contact') }}>Contact</h3>
         </div>
       </div>
 
 
       {/* Navbar */}
-      <div className="navbar-background"></div>
 
-      <nav>
-
-        <div className="container-fluid align-items-end max-width">
+      <nav className="navbar navbar-expand-lg">
+        <div className="container-fluid align-items-center max-width">
 
           {/* Navbar Logo */}
           <div className="navbar-brand" onClick={() => { handleScroll('heroHome') }}>
             <Link to="/">
-              vizar solutions.
+              <h4>vizar solutions.</h4>
             </Link>
           </div>
 
           {/* Navbar burger button */}
-          <button onClick={handleOpenClick} className="navbar-toggler" type="button" data-bs-toggle="collapse" /*data-bs-target="#navbarNavDropdown"*/ aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon" ></span>
+
+          <button onClick={isOverlayActive ? handleCloseClick : handleOpenClick}
+          className="navbar-toggler" type="button" data-bs-toggle="collapse" /*data-bs-target="#navbarNavDropdown"*/ aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+
+            <span className={`navbar__toggle-icon ${isOverlayActive ? 'navbar__toggle-icon--close' : 'navbar__toggle-icon--burger'}`}></span>
+
           </button>
 
           {/* Navbar web */}

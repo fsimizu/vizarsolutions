@@ -1,0 +1,7 @@
+#contact-form input, #contact-form textarea , #contact-form button{
+    border-radius: 0;
+}
+
+#contact-form p{
+    margin-bottom: 0.3rem;
+}

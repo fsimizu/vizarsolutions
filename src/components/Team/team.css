@@ -1,3 +1,80 @@
 .team__member img {
     width: 100%
 }
+
+.team__member-content {
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+
+.team__member-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.team__member-hr-top {
+    margin-bottom: 0;
+    transition: margin-top 0.2s ease-in-out
+}
+
+.team__member-hr-top--collapsed {
+    margin-top: 30px;
+}
+.team__member-hr-top--expanded {
+    margin-top: 10px;
+}
+
+
+.team__member-hr-bottom {
+    margin-top: 0;   
+}
+
+
+
+.team__member-content--collapsed {
+    max-height: 0;
+}
+
+.team__member-content--expanded {
+    max-height: 500px;
+}
+
+
+
+.team__toggle-icon {
+    position: relative;
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+  }
+  
+  .team__toggle-icon::before,
+  .team__toggle-icon::after {
+    content: '';
+    position: absolute;
+    background-color: white;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .team__toggle-icon::before {
+    width: 100%;
+    height: 1px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  
+  .team__toggle-icon::after {
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .team__toggle-icon--minus::after {
+    transform: translateX(-50%) rotate(-90deg);
+  }

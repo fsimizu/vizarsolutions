@@ -9,10 +9,9 @@ export function Scope() {
                     <h3>With over a decade of experience in the Australian Financial Service Industry, we specialise in complex advice.. In fact, we love it! </h3>
 
                     <div className="scope__lists">
-
                         <div className="scope__ul1">
 
-                            <h4>Scope of advise</h4>
+                            <h4 className='curved-underline-text'>Scope of advise</h4>
                             <ul>
                                 <li>Superannuation</li>
                                 <li>SMSF</li>
@@ -27,7 +26,7 @@ export function Scope() {
                             </ul>
                         </div>
                         <div className="scope__ul2">
-                            <h4>Experience</h4>
+                            <h4 className='curved-underline-text'>Experience</h4>
                             <ul>
                                 <li>Clients with SMSFs, Companies, Trusts (even web of different entities)</li>
                                 <li>Medical Professionals</li>
