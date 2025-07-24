@@ -84,7 +84,7 @@ export function Contact() {
               value={formData.name}
               onChange={handleChange}
               placeholder="Enter name here"
-              className="form-control"
+              className="form-control background_clear"
               required
             /><br />
 
@@ -95,7 +95,7 @@ export function Contact() {
               value={formData.phone}
               onChange={handleChange}
               placeholder="Enter phone number"
-              className="form-control"
+              className="form-control background_clear"
               required
             /><br />
 
@@ -106,7 +106,7 @@ export function Contact() {
               value={formData.email}
               onChange={handleChange}
               placeholder="Enter email here"
-              className="form-control"
+              className="form-control background_clear"
               required
             /><br />
 
@@ -117,7 +117,7 @@ export function Contact() {
               onChange={handleChange}
               rows="3"
               placeholder="Enter your message"
-              className="form-control"
+              className="form-control background_clear"
               required
             ></textarea><br />
 

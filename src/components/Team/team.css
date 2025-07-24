@@ -17,7 +17,11 @@
 
 .team__member-hr-top {
     margin-bottom: 0;
-    transition: margin-top 0.2s ease-in-out
+    transition: margin-top 0.2s ease-in-out;
+}
+.team__member-name {
+    margin-bottom: 0.2rem;
+    margin-top: 0.2rem;
 }
 
 .team__member-hr-top--collapsed {
