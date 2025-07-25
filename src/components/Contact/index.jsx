@@ -18,12 +18,13 @@ export function Contact() {
   };
 
   const MY_SECRET = import.meta.env.VITE_CUSTOM_SECRET;
+  const EMAIL_API = import.meta.env.VITE_CUSTOM_API;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await fetch("https://qyyuxypefl.execute-api.us-east-1.amazonaws.com/dev/contact-us", {
+      const response = await fetch(EMAIL_API, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

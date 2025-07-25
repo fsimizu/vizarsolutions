@@ -47,7 +47,7 @@ export function Navbar() {
       </div>
 
       {/* Navbar */}
-      <nav className="navbar navbar-expand-lg">
+      <nav className="navbar navbar-expand-lg padding-sections">
         <div className="container-fluid align-items-center max-width">
 
           {/* Navbar Logo */}
