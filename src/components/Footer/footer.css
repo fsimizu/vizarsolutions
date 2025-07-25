@@ -1,0 +1,10 @@
+@media (min-width: 768px) {
+.footer__details {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+}

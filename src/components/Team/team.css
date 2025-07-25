@@ -7,7 +7,6 @@
     transition: max-height 0.5s ease-in-out;
 }
 
-
 .team__member-header {
     display: flex;
     justify-content: space-between;
@@ -30,13 +29,9 @@
 .team__member-hr-top--expanded {
     margin-top: 10px;
 }
-
-
 .team__member-hr-bottom {
     margin-top: 0;   
 }
-
-
 
 .team__member-content--collapsed {
     max-height: 0;
@@ -45,8 +40,6 @@
 .team__member-content--expanded {
     max-height: 500px;
 }
-
-
 
 .team__toggle-icon {
     position: relative;
@@ -81,4 +74,22 @@
   
   .team__toggle-icon--minus::after {
     transform: translateX(-50%) rotate(-90deg);
+  }
+
+  .team__member {
+    max-width: 425px;
+}
+
+  @media (min-width: 768px) {
+    .team__members {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        /* justify-content: space-around; */
+        gap: 5rem;
+    }
+    .team__member {
+        width: 35%;
+    }
+
   }

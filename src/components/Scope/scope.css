@@ -24,3 +24,18 @@
 .curved-underline-text::before {
   bottom: 22px;
 }
+
+
+@media (min-width: 768px) {
+  .scope__lists {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-around;
+
+  }
+  .scope__ul {
+    width: 25%;
+  }
+
+}

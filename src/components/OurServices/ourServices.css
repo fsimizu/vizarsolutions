@@ -1,0 +1,26 @@
+.ourServices__service {
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+    .ourServices__service {
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        align-items: center;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .ourServices__service h4 {
+        width: 40%;
+    }
+
+    .ourServices__service-details {
+        width: 60%;
+    }
+
+    .ourServices__content {
+        max-width: 80%;
+    }
+}

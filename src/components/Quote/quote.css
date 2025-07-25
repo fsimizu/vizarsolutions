@@ -1,0 +1,7 @@
+@media (min-width: 768px) {
+    .quote__content {
+        width: 70%;
+        max-width: 768px;
+    }
+
+}

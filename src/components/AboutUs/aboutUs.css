@@ -1,0 +1,15 @@
+
+@media (min-width: 768px) {
+    .aboutUs__content {
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+    }
+    .aboutUs__description {
+        width: 50%;
+        /* gap: 10%; */
+    }
+    .aboutUs__contact {
+        margin-left: 5rem;
+    }
+}

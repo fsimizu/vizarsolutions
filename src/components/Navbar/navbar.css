@@ -15,7 +15,6 @@
 .navbar .container-fluid{
     padding-left: 1.3rem;
     padding-right: 1.3rem;
-
 }
 
 .navbar-brand a {
@@ -40,6 +39,18 @@
 .navbar-toggler-icon {
     font-size: 1.3rem;
     filter: invert(97%) sepia(18%) saturate(372%) hue-rotate(355deg) brightness(118%) contrast(99%);
+}
+
+.nav-item a {
+    text-decoration: none;
+    
+}
+
+.nav-link {
+    color: white;
+}
+.navbar-nav {
+    gap: 10px;
 }
 
 /* The Overlay (background) */
@@ -110,3 +121,12 @@
   .navbar__toggle-icon--close::before {
     transform: translateY(-5.5px) rotate(135deg);
   }
+
+
+
+@media (min-width: 1024px) {
+    .navbar .container-fluid{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

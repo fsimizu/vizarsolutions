@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Swal from 'sweetalert2';
 import "./contact.css";
 
 export function Contact() {
@@ -16,50 +17,43 @@ export function Contact() {
     }));
   };
 
+  const MY_SECRET = import.meta.env.VITE_CUSTOM_SECRET;
+
   const handleSubmit = async (e) => {
-
     e.preventDefault();
-    const { name, phone, email, desc } = formData;
-
-    // Basic validation
-    const nameRe = /^[A-Za-z]{2,}$/;
-    const phoneRe = /^[0-9]{10}$/;
-    const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    // if (!nameRe.test(name)) {
-    //   console.log("Name must be at least 2 letters.");
-    //   alert("Name must be at least 2 letters.");
-    //   return;
-    // }
-    // if (!phoneRe.test(phone)) {
-    //   console.log("Please enter a valid 10-digit phone number.");
-    //   alert("Please enter a valid 10-digit phone number.");
-    //   return;
-    // }
-    // if (!emailRe.test(email)) {
-    //   console.log("Please enter a valid email address.");
-    //   alert("Please enter a valid email address.");
-    //   return;
-    // }
 
     try {
-      const response = await fetch("https://qyyuxypefl.execute-api.us-east-1.amazonaws.com/dev/test", {
+      const response = await fetch("https://qyyuxypefl.execute-api.us-east-1.amazonaws.com/dev/contact-us", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          // "x-custom-secret": "g0r3%ODhC26$2{$£"
+          "x-custom-secret": MY_SECRET
         },
         body: JSON.stringify(formData),
       });
 
+      const result = await response.json();    
 
-      if (response.ok) {
-        alert("Successfully submitted!");
+      if (result.result === "Success") {
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Successfully submitted!",
+          showConfirmButton: false,
+          timer: 1500
+        });
+
         setFormData({ name: "", phone: "", email: "", desc: "" });
 
       } else {
-        alert("Submission failed. Please try again.");
-        console.log("error 1")
+
+        Swal.fire({
+          position: "top-end",
+          icon: "error",
+          title: "Submission failed. Please try again.",
+          showConfirmButton: false,
+          timer: 1500
+        });
       }
     } catch (error) {
       console.error("Error submitting form:", error);
@@ -71,11 +65,11 @@ export function Contact() {
     <div id="contact" className="contact__container background_dark padding-sections">
       <div className="contact__body max-width">
         <div className="contact__content">
-
-          <h2>Get in Touch</h2>
-          <p>Need a hand managing your business operations? We’re here to support you.</p>
-          <p>Whether you’re looking to outsource tasks, hire remote talent, or simply want to explore how we can help your business run more smoothly—let’s talk.</p>
-
+          <div className="contact__header">
+            <h2>Get in Touch</h2>
+            <p>Need a hand managing your business operations? We’re here to support you.</p>
+            <p>Whether you’re looking to outsource tasks, hire remote talent, or simply want to explore how we can help your business run more smoothly—let’s talk.</p>
+          </div>
           <form id="contact-form" onSubmit={handleSubmit}>
             <p>Name</p>
             <input

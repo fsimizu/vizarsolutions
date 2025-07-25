@@ -39,18 +39,14 @@ export function Navbar() {
 
       {/* Overlay */}
       <div id="myNav" className="overlay background_dark" >
-        {/* <a className="closebtn" onClick={handleCloseClick}>&times;</a> */}
         <div className="overlay-content">
-            {/* <h3 onClick={() => { handleCloseClick; handleScroll('heroHome') }}>Home</h3> */}
             <h3 onClick={() => { handleCloseClick; handleScroll('aboutUs') }}>About us</h3>
             <h3 onClick={() => { handleCloseClick; handleScroll('ourServices') }}>Our Services</h3>
             <h3 onClick={() => { handleCloseClick; handleScroll('contact') }}>Contact</h3>
         </div>
       </div>
 
-
       {/* Navbar */}
-
       <nav className="navbar navbar-expand-lg">
         <div className="container-fluid align-items-center max-width">
 
@@ -62,12 +58,9 @@ export function Navbar() {
           </div>
 
           {/* Navbar burger button */}
-
           <button onClick={isOverlayActive ? handleCloseClick : handleOpenClick}
           className="navbar-toggler" type="button" data-bs-toggle="collapse" /*data-bs-target="#navbarNavDropdown"*/ aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-
             <span className={`navbar__toggle-icon ${isOverlayActive ? 'navbar__toggle-icon--close' : 'navbar__toggle-icon--burger'}`}></span>
-
           </button>
 
           {/* Navbar web */}
@@ -75,22 +68,22 @@ export function Navbar() {
             <ul className="navbar-nav">
               <li className="nav-item">
                 <Link to="/">
-                  <div className="nav-link" id="nav_about" onClick={() => { handleScroll('aboutUs') }}>About</div>
+                  <div className="nav-link" onClick={() => { handleScroll('aboutUs') }}>About</div>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link to="/">
-                  <div className="nav-link" id="nav_about" onClick={() => { handleScroll('aboutUs') }}>Our Services</div>
+                  <div className="nav-link" onClick={() => { handleScroll('ourServices') }}>Our Services</div>
                 </Link>
               </li>
               <li className="nav-item" >
                 <Link to="/">
-                  <div className="nav-link" id="nav_about" onClick={() => { handleScroll('root') }}>Our Team</div>
+                  <div className="nav-link" onClick={() => { handleScroll('ourTeam') }}>Our Team</div>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link to="/">
-                  <div className="nav-link" id="nav_about" onClick={() => { handleScroll('aboutUs') }}>Contact Us</div>
+                  <div className="nav-link" onClick={() => { handleScroll('contact') }}>Contact Us</div>
                 </Link>
               </li>
             </ul>
