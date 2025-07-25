@@ -36,7 +36,7 @@ export function OurServices() {
             </div>
           </div>
           <hr />
-          <p>Systems we use: Xplan, AdviserLogic, Midwinter, Intelliflow</p>
+          <p>Systems we use: Xplan, AdviserLogic, Midwinter, Intelliflo</p>
 
         </div>
 
